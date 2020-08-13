@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 5.0.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Oct 14, 2018 at 08:39 PM
--- Server version: 10.1.36-MariaDB
--- PHP Version: 7.2.10
+-- Host: 127.0.0.1
+-- Generation Time: Aug 13, 2020 at 09:03 AM
+-- Server version: 10.4.11-MariaDB
+-- PHP Version: 7.4.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -31,16 +31,18 @@ SET time_zone = "+00:00";
 CREATE TABLE `data` (
   `id` int(5) NOT NULL,
   `nama` varchar(30) NOT NULL,
-  `alamat` longtext NOT NULL,
-  `telepon` varchar(15) NOT NULL
+  `nis` bigint(100) NOT NULL,
+  `jenis_kelamin` varchar(20) NOT NULL,
+  `jurusan` varchar(20) NOT NULL,
+  `foto` longtext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `data`
 --
 
-INSERT INTO `data` (`id`, `nama`, `alamat`, `telepon`) VALUES
-(5, 'Mnatap', 'lalal', '12345');
+INSERT INTO `data` (`id`, `nama`, `nis`, `jenis_kelamin`, `jurusan`, `foto`) VALUES
+(11, 'Chintia Evril', 3103117127, 'Perempuan', 'TKJ', 'https://scontent-sin6-1.cdninstagram.com/v/t51.2885-19/s320x320/109928825_1393733504159512_3102924867230597998_n.jpg?_nc_ht=scontent-sin6-1.cdninstagram.com&_nc_cat=104&_nc_ohc=6ETMd0uDBqgAX_KxDxp&oh=cf8d5574d90df6ce4590c1eb868a4c83&oe=5F5CF616');
 
 --
 -- Indexes for dumped tables
@@ -60,7 +62,7 @@ ALTER TABLE `data`
 -- AUTO_INCREMENT for table `data`
 --
 ALTER TABLE `data`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
